@@ -1,5 +1,8 @@
+import Cube from "./components/Cube"
+import React from "react"
+
 const App = () => {
-	return <></>
+	return <Cube />
 }
 
 export default App
