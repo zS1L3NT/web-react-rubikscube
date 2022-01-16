@@ -48,7 +48,7 @@ const Cube = (): JSX.Element => {
 						(a, r) => (
 							<div
 								className="rotation-wrapper"
-								style={{ transform: `rotateX(${-r.y}deg) rotateY(${r.x}deg)` }}>
+								style={{ transform: `rotateX(${-r.y * 0.5}deg) rotateY(${r.x * 0.5}deg)` }}>
 								{a}
 							</div>
 						),
