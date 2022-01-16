@@ -9,9 +9,11 @@ const Cube = (): JSX.Element => {
 	const [rotations, setRotations] = useState<iRotation[]>([])
 
 	const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		setDragging(true)
-		setPosition({ x: e.clientX, y: e.clientY })
-		setRotations([...rotations, { x: 0, y: 0 }])
+		if (e.button === 1) {
+			setDragging(true)
+			setPosition({ x: e.clientX, y: e.clientY })
+			setRotations([...rotations, { x: 0, y: 0 }])
+		}
 	}
 
 	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
