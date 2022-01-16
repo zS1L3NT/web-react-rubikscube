@@ -1,6 +1,7 @@
 import Square from "./Square"
 import { Color, iRotation } from "../types.d"
 import { useState } from "react"
+import Surface from "./Surface"
 
 const Cube = (): JSX.Element => {
 	const [dragging, setDragging] = useState(false)
@@ -48,7 +49,9 @@ const Cube = (): JSX.Element => {
 						(a, r) => (
 							<div
 								className="rotation-wrapper"
-								style={{ transform: `rotateX(${-r.y * 0.5}deg) rotateY(${r.x * 0.5}deg)` }}>
+								style={{
+									transform: `rotateX(${-r.y * 0.5}deg) rotateY(${r.x * 0.5}deg)`
+								}}>
 								{a}
 							</div>
 						),
@@ -60,6 +63,11 @@ const Cube = (): JSX.Element => {
 										<Square key={`${color}-${i}`} i={i} color={color} />
 									))
 							)}
+							{Array(12)
+								.fill(0)
+								.map((_, i) => (
+									<Surface key={i} i={i} />
+								))}
 						</>
 					)}
 				</div>
