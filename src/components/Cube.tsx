@@ -1,9 +1,15 @@
 import Square from "./Square"
-import { Color, iRotation } from "../types.d"
+import { Color, iCubeData, iRotation } from "../types.d"
 import { useState } from "react"
 import Surface from "./Surface"
 
-const Cube = (): JSX.Element => {
+interface Props {
+	cubeData: iCubeData
+}
+
+const Cube = (props: Props): JSX.Element => {
+	const { cubeData } = props
+
 	const [dragging, setDragging] = useState(false)
 	const [position, setPosition] = useState<iRotation>({ x: 0, y: 0 })
 	const [rotations, setRotations] = useState<iRotation[]>([])
