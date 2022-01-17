@@ -64,12 +64,10 @@ const Cube = (props: Props): JSX.Element => {
 							</div>
 						),
 						<>
-							{Object.values(Color).flatMap(color =>
-								Array(9)
-									.fill(0)
-									.map((_, i) => (
-										<Square key={`${color}-${i}`} i={i} color={color} />
-									))
+							{(Object.keys(cubeData) as (keyof iCubeData)[]).flatMap(direction =>
+								cubeData[direction].map((color, i) => (
+									<Square key={`${direction}-${i}`} i={i} color={color} direction={direction} />
+								))
 							)}
 							{Array(12)
 								.fill(0)

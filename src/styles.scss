@@ -54,48 +54,48 @@ body,
 			}
 
 			$cubes: (
-				"white": (
-					rotateX(90deg) rotateY(0),
-					(0px, 100px, 200px),
-					(-100px, 0px, 100px),
-					50px
-				),
-				"red": (
+				"front": (
 					rotateX(0deg) rotateY(0),
 					(0px, 100px, 200px),
 					(0px, 100px, 200px),
 					150px
 				),
-				"yellow": (
-					rotateX(-90deg) rotateY(0),
-					(0px, 100px, 200px),
-					(-100px, 0px, 100px),
-					250px
-				),
-				"orange": (
+				"back": (
 					rotateX(-180deg) rotateY(0),
 					(0px, 100px, 200px),
 					(-200px, -100px, 0px),
 					150px
 				),
-				"green": (
+				"left": (
 					rotateX(0deg) rotateY(-90deg),
 					(-100px, 0px, 100px),
 					(0px, 100px, 200px),
 					50px
 				),
-				"blue": (
+				"right": (
 					rotateX(0deg) rotateY(90deg),
 					(-100px, 0px, 100px),
 					(0px, 100px, 200px),
 					250px
+				),
+				"top": (
+					rotateX(90deg) rotateY(0),
+					(0px, 100px, 200px),
+					(-100px, 0px, 100px),
+					50px
+				),
+				"bottom": (
+					rotateX(-90deg) rotateY(0),
+					(0px, 100px, 200px),
+					(-100px, 0px, 100px),
+					250px
 				)
 			);
 
-			@each $color, $cube in $cubes {
+			@each $direction, $cube in $cubes {
 				@each $y in nth($cube, 3) {
 					@each $x in nth($cube, 2) {
-						&.#{$color}-#{index(nth($cube, 3), $y) * 3 + index(nth($cube, 2), $x) - 4} {
+						&.#{$direction}-#{index(nth($cube, 3), $y) * 3 + index(nth($cube, 2), $x) - 4} {
 							transform: nth($cube, 1) translate3d($x, $y, nth($cube, 4));
 						}
 					}
