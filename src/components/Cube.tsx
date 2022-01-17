@@ -1,8 +1,8 @@
+import CubeHandle from "./Handles/CubeHandle"
 import Square from "./Square"
 import Surface from "./Surface"
-import { iCubeData, iRotation } from "../types.d"
+import { iCubeData, iVector2D, iVector3D } from "../types.d"
 import { useState } from "react"
-import CubeHandle from "./Handles/CubeHandle"
 
 interface Props {
 	cubeData: iCubeData
@@ -11,8 +11,9 @@ interface Props {
 const Cube = (props: Props): JSX.Element => {
 	const { cubeData } = props
 
-	const [cursor, setCursor] = useState<iRotation>({ x: 0, y: 0 })
-	const [drag, setDrag] = useState<iRotation | null>(null)
+	const [rotation, setRotation] = useState<iVector3D>({ x: 330, y: 60, z: 0 })
+	const [cursor, setCursor] = useState<iVector2D>({ x: 0, y: 0 })
+	const [drag, setDrag] = useState<iVector2D | null>(null)
 
 	const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		if (e.button === 1) {
@@ -52,17 +53,28 @@ const Cube = (props: Props): JSX.Element => {
 								? `rotateX(${-drag.y * 0.5}deg) rotateY(${drag.x * 0.5}deg)`
 								: ""
 						}}>
-						{cubeData.map(({ correct, current }) => (
-							<Square key={`${correct.face}-${correct.position}`} {...current} />
-						))}
-						{Array(12)
-							.fill(0)
-							.map((_, i) => (
-								<Surface key={i} i={i} />
+						<div
+							className="rotation-wrapper"
+							style={{
+								transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) rotateZ(${rotation.z}deg)`
+							}}>
+							{cubeData.map(({ correct, current }) => (
+								<Square key={`${correct.face}-${correct.position}`} {...current} />
 							))}
-						{(["x", "y", "z"] as const).map(axis => (
-							<CubeHandle axis={axis} />
-						))}
+							{Array(12)
+								.fill(0)
+								.map((_, i) => (
+									<Surface key={i} i={i} />
+								))}
+							{(["x", "y", "z"] as const).map(axis => (
+								<CubeHandle
+									key={axis}
+									axis={axis}
+									rotation={rotation}
+									setRotation={setRotation}
+								/>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

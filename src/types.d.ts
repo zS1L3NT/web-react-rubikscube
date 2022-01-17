@@ -41,12 +41,12 @@ export enum Color {
 	YELLOW = "yellow"
 }
 
-export interface iRotation {
+export interface iVector2D {
 	x: number
 	y: number
 }
 
-export interface iTranslate {
+export interface iVector3D {
 	x: number
 	y: number
 	z: number

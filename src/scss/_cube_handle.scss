@@ -2,12 +2,7 @@
 	position: absolute;
 	width: 500px;
 	height: 500px;
-	border: 2.5px solid lightgrey;
-	border-radius: 50%;
-
-	&:hover {
-		border: 2.5px solid grey;
-	}
+	cursor: pointer;
 
 	$axises: (
 		"x": rotateY(90deg) translate3d(0, -100px, -100px),
