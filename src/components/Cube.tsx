@@ -2,6 +2,7 @@ import Square from "./Square"
 import Surface from "./Surface"
 import { iCubeData, iRotation } from "../types.d"
 import { useState } from "react"
+import CubeHandle from "./Handles/CubeHandle"
 
 interface Props {
 	cubeData: iCubeData
@@ -59,6 +60,9 @@ const Cube = (props: Props): JSX.Element => {
 							.map((_, i) => (
 								<Surface key={i} i={i} />
 							))}
+						{(["x", "y", "z"] as const).map(axis => (
+							<CubeHandle axis={axis} />
+						))}
 					</div>
 				</div>
 			</div>

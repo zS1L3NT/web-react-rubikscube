@@ -1,0 +1,73 @@
+.square {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+
+	& > div {
+		border: 5px solid black;
+		width: 90px;
+		height: 90px;
+		border-radius: 10px;
+	}
+
+	$directions: (
+		"top-left",
+		"top-center",
+		"top-right",
+		"center-left",
+		"center-center",
+		"center-right",
+		"bottom-left",
+		"bottom-center",
+		"bottom-right"
+	);
+
+	$cubes: (
+		"front": (
+			rotateX(0deg) rotateY(0),
+			(0px, 100px, 200px),
+			(0px, 100px, 200px),
+			150px
+		),
+		"back": (
+			rotateX(-180deg) rotateY(0),
+			(0px, 100px, 200px),
+			(-200px, -100px, 0px),
+			150px
+		),
+		"left": (
+			rotateX(0deg) rotateY(-90deg),
+			(-100px, 0px, 100px),
+			(0px, 100px, 200px),
+			50px
+		),
+		"right": (
+			rotateX(0deg) rotateY(90deg),
+			(-100px, 0px, 100px),
+			(0px, 100px, 200px),
+			250px
+		),
+		"top": (
+			rotateX(90deg) rotateY(0),
+			(0px, 100px, 200px),
+			(-100px, 0px, 100px),
+			50px
+		),
+		"bottom": (
+			rotateX(-90deg) rotateY(0),
+			(0px, 100px, 200px),
+			(-100px, 0px, 100px),
+			250px
+		)
+	);
+
+	@each $direction, $cube in $cubes {
+		@each $y in nth($cube, 3) {
+			@each $x in nth($cube, 2) {
+				&.#{$direction}-#{nth($directions, index(nth($cube, 3), $y) * 3 + index(nth($cube, 2), $x) - 3)} {
+					transform: nth($cube, 1) translate3d($x, $y, nth($cube, 4));
+				}
+			}
+		}
+	}
+}
