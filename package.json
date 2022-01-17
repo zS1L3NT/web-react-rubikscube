@@ -6,7 +6,6 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@fseehawer/react-circular-slider": "^2.3.9",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"sass": "^1.48.0"

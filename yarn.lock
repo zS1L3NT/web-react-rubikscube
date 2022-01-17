@@ -236,11 +236,6 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@fseehawer/react-circular-slider@^2.3.9":
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/@fseehawer/react-circular-slider/-/react-circular-slider-2.3.9.tgz#0947142687f3101d5fd8f126b32ed79d12009f2e"
-  integrity sha512-GDfYQCiBfcs5QyoWdUPlrzcgXI+XClj39LqLMgRcsved/ppLXkW1qMOPDSk8Nwz5cvVxd9pD4bZ2V3ZKvGKapg==
-
 "@rollup/pluginutils@^4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.2.tgz#ed5821c15e5e05e32816f5fb9ec607cdf5a75751"
