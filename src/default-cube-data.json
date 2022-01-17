@@ -1,0 +1,218 @@
+[
+	{
+		"current": { "position": "top-left", "direction": "front", "face": "red" },
+		"correct": { "position": "top-left", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "front", "face": "red" },
+		"correct": { "position": "top-center", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "front", "face": "red" },
+		"correct": { "position": "top-right", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "front", "face": "red" },
+		"correct": { "position": "center-left", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "front", "face": "red" },
+		"correct": { "position": "center-center", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "front", "face": "red" },
+		"correct": { "position": "center-right", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "front", "face": "red" },
+		"correct": { "position": "bottom-left", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "front", "face": "red" },
+		"correct": { "position": "bottom-center", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "front", "face": "red" },
+		"correct": { "position": "bottom-right", "direction": "front", "face": "red" }
+	},
+	{
+		"current": { "position": "top-left", "direction": "back", "face": "orange" },
+		"correct": { "position": "top-left", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "back", "face": "orange" },
+		"correct": { "position": "top-center", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "back", "face": "orange" },
+		"correct": { "position": "top-right", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "back", "face": "orange" },
+		"correct": { "position": "center-left", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "back", "face": "orange" },
+		"correct": { "position": "center-center", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "back", "face": "orange" },
+		"correct": { "position": "center-right", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "back", "face": "orange" },
+		"correct": { "position": "bottom-left", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "back", "face": "orange" },
+		"correct": { "position": "bottom-center", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "back", "face": "orange" },
+		"correct": { "position": "bottom-right", "direction": "back", "face": "orange" }
+	},
+	{
+		"current": { "position": "top-left", "direction": "left", "face": "green" },
+		"correct": { "position": "top-left", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "left", "face": "green" },
+		"correct": { "position": "top-center", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "left", "face": "green" },
+		"correct": { "position": "top-right", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "left", "face": "green" },
+		"correct": { "position": "center-left", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "left", "face": "green" },
+		"correct": { "position": "center-center", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "left", "face": "green" },
+		"correct": { "position": "center-right", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "left", "face": "green" },
+		"correct": { "position": "bottom-left", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "left", "face": "green" },
+		"correct": { "position": "bottom-center", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "left", "face": "green" },
+		"correct": { "position": "bottom-right", "direction": "left", "face": "green" }
+	},
+	{
+		"current": { "position": "top-left", "direction": "right", "face": "blue" },
+		"correct": { "position": "top-left", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "right", "face": "blue" },
+		"correct": { "position": "top-center", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "right", "face": "blue" },
+		"correct": { "position": "top-right", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "right", "face": "blue" },
+		"correct": { "position": "center-left", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "right", "face": "blue" },
+		"correct": { "position": "center-center", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "right", "face": "blue" },
+		"correct": { "position": "center-right", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "right", "face": "blue" },
+		"correct": { "position": "bottom-left", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "right", "face": "blue" },
+		"correct": { "position": "bottom-center", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "right", "face": "blue" },
+		"correct": { "position": "bottom-right", "direction": "right", "face": "blue" }
+	},
+	{
+		"current": { "position": "top-left", "direction": "top", "face": "white" },
+		"correct": { "position": "top-left", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "top", "face": "white" },
+		"correct": { "position": "top-center", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "top", "face": "white" },
+		"correct": { "position": "top-right", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "top", "face": "white" },
+		"correct": { "position": "center-left", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "top", "face": "white" },
+		"correct": { "position": "center-center", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "top", "face": "white" },
+		"correct": { "position": "center-right", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "top", "face": "white" },
+		"correct": { "position": "bottom-left", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "top", "face": "white" },
+		"correct": { "position": "bottom-center", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "top", "face": "white" },
+		"correct": { "position": "bottom-right", "direction": "top", "face": "white" }
+	},
+	{
+		"current": { "position": "top-left", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "top-left", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "top-center", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "top-center", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "top-right", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "top-right", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "center-left", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "center-left", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "center-center", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "center-center", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "center-right", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "center-right", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "bottom-left", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "bottom-left", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "bottom-center", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "bottom-center", "direction": "bottom", "face": "yellow" }
+	},
+	{
+		"current": { "position": "bottom-right", "direction": "bottom", "face": "yellow" },
+		"correct": { "position": "bottom-right", "direction": "bottom", "face": "yellow" }
+	}
+]

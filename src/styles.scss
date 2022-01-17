@@ -45,6 +45,7 @@ body,
 			position: absolute;
 			width: 100px;
 			height: 100px;
+			transition: transform 1s ease;
 
 			& > div {
 				border: 5px solid black;
@@ -52,6 +53,18 @@ body,
 				height: 90px;
 				border-radius: 10px;
 			}
+
+			$directions: (
+				"top-left",
+				"top-center",
+				"top-right",
+				"center-left",
+				"center-center",
+				"center-right",
+				"bottom-left",
+				"bottom-center",
+				"bottom-right",
+			);
 
 			$cubes: (
 				"front": (
@@ -95,7 +108,7 @@ body,
 			@each $direction, $cube in $cubes {
 				@each $y in nth($cube, 3) {
 					@each $x in nth($cube, 2) {
-						&.#{$direction}-#{index(nth($cube, 3), $y) * 3 + index(nth($cube, 2), $x) - 4} {
+						&.#{$direction}-#{nth($directions, index(nth($cube, 3), $y) * 3 + index(nth($cube, 2), $x) - 3)} {
 							transform: nth($cube, 1) translate3d($x, $y, nth($cube, 4));
 						}
 					}

@@ -1,7 +1,7 @@
 import Square from "./Square"
-import { Color, iCubeData, iRotation } from "../types.d"
-import { useState } from "react"
 import Surface from "./Surface"
+import { iCubeData, iRotation } from "../types.d"
+import { useState } from "react"
 
 interface Props {
 	cubeData: iCubeData
@@ -12,7 +12,7 @@ const Cube = (props: Props): JSX.Element => {
 
 	const [dragging, setDragging] = useState(false)
 	const [position, setPosition] = useState<iRotation>({ x: 0, y: 0 })
-	const [rotations, setRotations] = useState<iRotation[]>([])
+	const [rotations, setRotations] = useState<iRotation[]>([{ x: 90, y: 60 }])
 
 	const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		if (e.button === 1) {
@@ -64,11 +64,9 @@ const Cube = (props: Props): JSX.Element => {
 							</div>
 						),
 						<>
-							{(Object.keys(cubeData) as (keyof iCubeData)[]).flatMap(direction =>
-								cubeData[direction].map((color, i) => (
-									<Square key={`${direction}-${i}`} i={i} color={color} direction={direction} />
-								))
-							)}
+							{cubeData.map(({ correct, current }) => (
+								<Square key={`${correct.face}-${correct.position}`} {...current} />
+							))}
 							{Array(12)
 								.fill(0)
 								.map((_, i) => (

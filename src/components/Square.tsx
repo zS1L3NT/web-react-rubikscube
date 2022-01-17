@@ -1,17 +1,17 @@
-import { Color, iCubeData } from "../types.d"
+import { Color, Direction, Position } from "../types.d"
 
 interface Props {
-	i: number
-	color: Color
-	direction: keyof iCubeData
+	position: Position
+	direction: Direction
+	face: Color
 }
 
 const Square = (props: Props): JSX.Element => {
-	const { i, color, direction } = props
+	const { position, direction, face } = props
 
 	return (
-		<div className={`square ${direction}-${i}`}>
-			<div style={{ backgroundColor: color }} />
+		<div className={`square ${direction}-${position}`}>
+			<div style={{ backgroundColor: face }} />
 		</div>
 	)
 }
