@@ -1,3 +1,5 @@
+import Arrow from "./Arrow"
+import rotateCube from "../functions/rotateCube"
 import Square from "./Square"
 import Surface from "./Surface"
 import { iCubeData, iVector2D } from "../types.d"
@@ -10,6 +12,7 @@ interface Props {
 const Cube = (props: Props): JSX.Element => {
 	const { cubeData } = props
 
+	const [rotation, setRotation] = useState<iVector2D>({ x: 330, y: 45 })
 	const [cursor, setCursor] = useState<iVector2D>({ x: 0, y: 0 })
 	const [drag, setDrag] = useState<iVector2D | null>(null)
 
@@ -36,12 +39,31 @@ const Cube = (props: Props): JSX.Element => {
 		}
 	}
 
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+		switch (e.key) {
+			case "ArrowUp":
+				setRotation(rotation => rotateCube(rotation, "up"))
+				break
+			case "ArrowDown":
+				setRotation(rotation => rotateCube(rotation, "down"))
+				break
+			case "ArrowLeft":
+				setRotation(rotation => rotateCube(rotation, "left"))
+				break
+			case "ArrowRight":
+				setRotation(rotation => rotateCube(rotation, "right"))
+				break
+		}
+	}
+
 	return (
 		<div
 			className={`drag-area ${drag ? "dragging" : ""}`}
 			onMouseDown={handleMouseDown}
 			onMouseMove={handleMouseMove}
-			onMouseUp={handleMouseUp}>
+			onMouseUp={handleMouseUp}
+			onKeyDown={handleKeyDown}
+			tabIndex={0}>
 			<div className="cube-wrapper">
 				<div className="cube">
 					<div
@@ -51,17 +73,26 @@ const Cube = (props: Props): JSX.Element => {
 								? `rotateX(${-drag.y * 0.5}deg) rotateY(${drag.x * 0.5}deg)`
 								: ""
 						}}>
-						{cubeData.map(({ correct, current }) => (
-							<Square key={`${correct.face}-${correct.position}`} {...current} />
-						))}
-						{Array(12)
-							.fill(0)
-							.map((_, i) => (
-								<Surface key={i} i={i} />
+						<div
+							className="rotation-wrapper"
+							style={{
+								transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`
+							}}>
+							{cubeData.map(({ correct, current }) => (
+								<Square key={`${correct.face}-${correct.position}`} {...current} />
 							))}
+							{Array(12)
+								.fill(0)
+								.map((_, i) => (
+									<Surface key={i} i={i} />
+								))}
+						</div>
 					</div>
 				</div>
 			</div>
+			{(["up", "right", "down", "left"] as const).map(direction => (
+				<Arrow key={direction} direction={direction} setRotation={setRotation} />
+			))}
 		</div>
 	)
 }

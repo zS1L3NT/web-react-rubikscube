@@ -22,6 +22,31 @@ body,
 	}
 }
 
+.arrow {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	transition: transform 0.3s ease;
+
+	$directions: (
+		"up": translateY(-300px) rotateX(180deg),
+		"right": translateX(300px) rotateZ(-90deg),
+		"down": translateY(300px),
+		"left": translateX(-300px) rotateZ(90deg)
+	);
+
+	@each $direction, $transform in $directions {
+		&-#{$direction} {
+			transform: $transform;
+			cursor: pointer;
+
+			&:hover {
+				transform: $transform scale(1.25);
+			}
+		}
+	}
+}
+
 .cube-wrapper {
 	perspective: 2000;
 	-webkit-perspective: 2000;

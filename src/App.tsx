@@ -1,5 +1,5 @@
 import Cube from "./components/Cube"
-import defaultCubeData from "./default-cube-data.json"
+import defaultCubeData from "./json/default-cube-data.json"
 import { iCubeData } from "./types.d"
 import { useState } from "react"
 
