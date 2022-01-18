@@ -1,7 +1,6 @@
-import CubeHandle from "./Handles/CubeHandle"
 import Square from "./Square"
 import Surface from "./Surface"
-import { iCubeData, iVector2D, iVector3D } from "../types.d"
+import { iCubeData, iVector2D } from "../types.d"
 import { useState } from "react"
 
 interface Props {
@@ -11,7 +10,6 @@ interface Props {
 const Cube = (props: Props): JSX.Element => {
 	const { cubeData } = props
 
-	const [rotation, setRotation] = useState<iVector3D>({ x: 0, y: 0, z: 0 })
 	const [cursor, setCursor] = useState<iVector2D>({ x: 0, y: 0 })
 	const [drag, setDrag] = useState<iVector2D | null>(null)
 
@@ -53,25 +51,14 @@ const Cube = (props: Props): JSX.Element => {
 								? `rotateX(${-drag.y * 0.5}deg) rotateY(${drag.x * 0.5}deg)`
 								: ""
 						}}>
-						<div
-							className="rotation-wrapper"
-							style={{
-								transform: `rotateX(${-rotation.x}rad) rotateY(${-rotation.y}rad) rotateZ(${
-									rotation.z
-								}rad)`
-							}}>
-							{cubeData.map(({ correct, current }) => (
-								<Square key={`${correct.face}-${correct.position}`} {...current} />
+						{cubeData.map(({ correct, current }) => (
+							<Square key={`${correct.face}-${correct.position}`} {...current} />
+						))}
+						{Array(12)
+							.fill(0)
+							.map((_, i) => (
+								<Surface key={i} i={i} />
 							))}
-							{Array(12)
-								.fill(0)
-								.map((_, i) => (
-									<Surface key={i} i={i} />
-								))}
-							{(["x", "y", "z"] as const).map(axis => (
-								<CubeHandle key={axis} axis={axis} setRotation={setRotation} />
-							))}
-						</div>
 					</div>
 				</div>
 			</div>
