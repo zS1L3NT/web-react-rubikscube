@@ -11,7 +11,7 @@ interface Props {
 const Cube = (props: Props): JSX.Element => {
 	const { cubeData } = props
 
-	const [rotation, setRotation] = useState<iVector3D>({ x: -Math.PI / 8, y: Math.PI / 4, z: 0 })
+	const [rotation, setRotation] = useState<iVector3D>({ x: 0, y: 0, z: 0 })
 	const [cursor, setCursor] = useState<iVector2D>({ x: 0, y: 0 })
 	const [drag, setDrag] = useState<iVector2D | null>(null)
 
@@ -56,7 +56,9 @@ const Cube = (props: Props): JSX.Element => {
 						<div
 							className="rotation-wrapper"
 							style={{
-								transform: `rotateX(${rotation.x}rad) rotateY(${rotation.y}rad) rotateZ(${rotation.z}rad)`
+								transform: `rotateX(${-rotation.x}rad) rotateY(${-rotation.y}rad) rotateZ(${
+									rotation.z
+								}rad)`
 							}}>
 							{cubeData.map(({ correct, current }) => (
 								<Square key={`${correct.face}-${correct.position}`} {...current} />
@@ -67,12 +69,7 @@ const Cube = (props: Props): JSX.Element => {
 									<Surface key={i} i={i} />
 								))}
 							{(["x", "y", "z"] as const).map(axis => (
-								<CubeHandle
-									key={axis}
-									axis={axis}
-									rotation={rotation}
-									setRotation={setRotation}
-								/>
+								<CubeHandle key={axis} axis={axis} setRotation={setRotation} />
 							))}
 						</div>
 					</div>

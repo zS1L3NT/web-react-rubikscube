@@ -20,4 +20,16 @@
 			transform: $transform;
 		}
 	}
+
+	$colors: (
+		"x": red,
+		"y": green,
+		"z": blue
+	);
+
+	@each $axis, $color in $colors {
+		&-#{$axis}-active {
+			border: 2.5px solid $color !important;
+		}
+	}
 }
