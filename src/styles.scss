@@ -22,56 +22,5 @@ body,
 	}
 }
 
-.arrow {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	transition: transform 0.2s ease;
-
-	$directions: (
-		"up": translateY(-300px) rotateX(180deg),
-		"right": translateX(300px) rotateZ(-90deg),
-		"down": translateY(300px),
-		"left": translateX(-300px) rotateZ(90deg)
-	);
-
-	@each $direction, $transform in $directions {
-		&-#{$direction} {
-			transform: $transform;
-			cursor: pointer;
-
-			&:hover {
-				transform: $transform scale(1.25);
-			}
-
-			&-clicked {
-				transform: $transform scale(1.1) !important;
-			}
-		}
-	}
-}
-
-.cube-wrapper {
-	perspective: 2000;
-	-webkit-perspective: 2000;
-
-	.cube {
-		position: relative;
-		width: 300px;
-		height: 300px;
-		transform-style: preserve-3d;
-		-webkit-transform-style: preserve-3d;
-
-		.rotation-wrapper {
-			width: 300px;
-			height: 300px;
-			position: relative;
-			transform-style: preserve-3d;
-			-webkit-transform-style: preserve-3d;
-			transition: transform 0.3s ease-out;
-
-			@import "./scss/square";
-			@import "./scss/surface";
-		}
-	}
-}
+@import "./scss/arrow";
+@import "./scss/cube";
