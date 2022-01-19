@@ -1,5 +1,5 @@
 import rotateCube from "../functions/rotateCube"
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import { iVector2D } from "../types"
 
 interface Props {
@@ -10,12 +10,26 @@ interface Props {
 const Arrow = (props: Props) => {
 	const { direction, setRotation } = props
 
+	const [clicked, setClicked] = useState(false)
+
+	const handleMouseDown = () => {
+		setClicked(true)
+	}
+
+	const handleMouseUp = () => {
+		setClicked(false)
+	}
+
 	const handleClick = () => {
 		setRotation(rotation => rotateCube(rotation, direction))
 	}
 
 	return (
-		<div className={`arrow arrow-${direction}`} onClick={handleClick}>
+		<div
+			className={`arrow arrow-${direction} ${clicked ? `arrow-${direction}-clicked` : ""}`}
+			onMouseDown={handleMouseDown}
+			onMouseUp={handleMouseUp}
+			onClick={handleClick}>
 			<svg
 				version="1.1"
 				id="Layer_1"
