@@ -1,6 +1,6 @@
 # Rubiks Cube
 
-![License](https://img.shields.io/github/license/zS1L3NT/.github?style=for-the-badge) ![Languages](https://img.shields.io/github/languages/count/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Top Language](https://img.shields.io/github/languages/top/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Commit Activity](https://img.shields.io/github/commit-activity/y/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Last commit](https://img.shields.io/github/last-commit/zS1L3NT/web-react-rubikscube?style=for-the-badge)
+![License](https://img.shields.io/github/license/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Languages](https://img.shields.io/github/languages/count/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Top Language](https://img.shields.io/github/languages/top/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Commit Activity](https://img.shields.io/github/commit-activity/y/zS1L3NT/web-react-rubikscube?style=for-the-badge) ![Last commit](https://img.shields.io/github/last-commit/zS1L3NT/web-react-rubikscube?style=for-the-badge)
 
 3D Rubiks Cube using HTML and SASS.
 Rotate the cube with your middle mouse button. Once you let go, it will spring back into it's original position.
