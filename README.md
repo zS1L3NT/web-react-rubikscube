@@ -42,9 +42,9 @@ I learn how the author of [this](https://html5rubik.com/tutorial/) website calcu
 ## Built with
 
 -   TypeScript
-    -   [![typescript](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/dev/typescript?style=flat-square)](https://npmjs.com/package/typescript)
     -   [![@types/react](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/dev/@types/react?style=flat-square)](https://npmjs.com/package/@types/react)
     -   [![@types/react-dom](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/dev/@types/react-dom?style=flat-square)](https://npmjs.com/package/@types/react-dom)
+    -   [![typescript](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/dev/typescript?style=flat-square)](https://npmjs.com/package/typescript)
 -   React
     -   [![react](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/react?style=flat-square)](https://npmjs.com/package/react)
     -   [![react-dom](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-react-rubikscube/react-dom?style=flat-square)](https://npmjs.com/package/react-dom)
